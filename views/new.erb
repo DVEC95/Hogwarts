@@ -12,10 +12,9 @@
         <br>
       <label for="house">House:</label>
       <select id="house" name="house">
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-        <option value="Hufflepuff">Hufflepuff</option>
+        <% for house in @houses %>
+        <option value="<%= house.id %>"><%= house.name%></option>
+        <% end %>
       </select>
       <input type="submit" value="Submit">
   </fieldset>
