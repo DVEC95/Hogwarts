@@ -55,6 +55,4 @@ class Student
     return Student.new(student)
   end
 
-
-
 end
