@@ -20,6 +20,23 @@ class Student
     @id = SQLRunner.run(sql, values)[0]['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE students SET (first_name, last_name, house, age)
+           = ($1, $2, $3, $4) WHERE id = $5"
+    values = [@first_name, @last_name, @house, @age, @id]
+    SQLRunner.run(sql, values)[0]['id'].to_i
+  end
+
+  def delete()
+    sql = "DELETE FROM students"
+    SQLRunner.run(sql)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM students"
+    SQLRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM students"
     students = SQLRunner.run(sql)
@@ -34,9 +51,6 @@ class Student
     return Student.new(student)
   end
 
-  def self.delete_all()
-    sql = "DELETE FROM students"
-    SQLRunner.run(sql)
-  end
+
 
 end
