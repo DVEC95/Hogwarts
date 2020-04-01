@@ -13,6 +13,10 @@ class Student
     @id = student['id'].to_i if student['id']
   end
 
+  def fullname()
+    return "#{@first_name} #{@last_name}"
+  end
+
   def save()
     sql = "INSERT INTO students (first_name, last_name, house, age)
            VALUES ($1, $2, $3, $4) RETURNING id"
