@@ -1,8 +1,10 @@
 require("pry-byebug")
 
 require_relative("./models/student.rb")
+require_relative("./models/house.rb")
 
 Student.delete_all()
+House.delete_all()
 
 #STUDENT DATA --------
 student1 = Student.new({
@@ -53,6 +55,30 @@ student6 = Student.new({
   })
 student6.save()
 
+#HOUSE DATA ---------
+house1 = House.new({
+  "name" => "Gryffindor",
+  "logo" => "https://vignette.wikia.nocookie.net/harrypotter/images/b/b1/Gryffindor_ClearBG.png/revision/latest?cb=20190222162949",
+  })
+house1.save()
+
+house2 = House.new({
+  "name" => "Slytherin",
+  "logo" => "https://vignette.wikia.nocookie.net/harrypotter/images/0/00/Slytherin_ClearBG.png/revision/latest?cb=20161020182557",
+  })
+house2.save()
+
+house3 = House.new({
+  "name" => "Ravenclaw",
+  "logo" => "https://vignette.wikia.nocookie.net/harrypotter/images/4/4e/RavenclawCrest.png/revision/latest?cb=20161020182442",
+  })
+house3.save()
+
+house4 = House.new({
+  "name" => "Hufflepuff",
+  "logo" => "https://vignette.wikia.nocookie.net/harrypotter/images/0/06/Hufflepuff_ClearBG.png/revision/latest?cb=20161020182518",
+  })
+house4.save()
 
 binding.pry
 nil
