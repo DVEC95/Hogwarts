@@ -1,0 +1,8 @@
+<h1>STUDENTS</h1>
+
+<% for student in @students %>
+  <h2> Name: <%= student.fullname() %> </h2>
+  <h2> House: <%= student.house() %> </h2>
+  <h2> Age: <%= student.age() %> </h2>
+  <hr>
+<% end %>

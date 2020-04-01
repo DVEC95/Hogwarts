@@ -1,0 +1,22 @@
+<form action="/students" method="POST">
+  <fieldset>
+    <legend>Student Information</legend>
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="first_name">
+        <br>
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name">
+        <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="1" max="100">
+        <br>
+      <label for="house">House:</label>
+      <select id="house" name="house">
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+      </select>
+      <input type="submit" value="Submit">
+  </fieldset>
+</form>
